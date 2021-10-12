@@ -18,6 +18,6 @@ Route::get('/', function () {
         'tags' => \App\Models\Tag::get()
     ] );
 });
-
+Route::post('/tags', [App\Http\Controllers\TagController::class, 'store']);
 Route::view('profile', 'profile');
 Route::post('profile', [App\Http\Controllers\ProfileController::class, 'upload']);
